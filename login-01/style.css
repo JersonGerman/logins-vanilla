@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+html{
+    height: 100%;
+}
+body{
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+header h1{
+    
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem auto;
+    text-align: center;
+} 
+main{
+    background-color: #aaa;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 0 1rem;
+
+}
+main section{
+    background-color: #eee;
+    border-radius: 5px;
+    height: 445px ;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+    width: 450px;
+}
+main section > div:first-child{
+    background-color: #9e9ef0;
+    height: 120px;
+    margin: 1rem auto;
+    width: 120px;
+    border-radius: 100%;
+}
+main section > div:last-child{
+    align-items: center;
+    background-color: #7676f3;
+    /* background-color: #ff0000; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 172px);
+    justify-content: center;
+    margin: 1rem auto;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    width: 400px;
+}
+
+main section > div:last-child > form {
+    padding: 0 10px;
+    width: 100%;
+}
+
+main section > div:last-child > form > button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 100%;
+    width: 152px;
+    transition-property:transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+}
+main section > div:last-child > form > button:hover{
+    box-shadow: 1px 1px 8px #292938;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+main section > div:last-child > form > button:active{
+    transform: scale(1.05);
+    /* background-color: #9191d3; */
+}
+main section > div:last-child > form div label{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 220px;
+    max-width: 100%;
+}
+main section > div:last-child > form > div > label > input{
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+main section > div:last-child > form > div > label > input:focus{
+    outline: none;
+    box-shadow: 1px 1px 8px #292938;
+}
+main section > div:last-child > form > div > label > input:focus + span,
+main section > div:last-child > form > div > label > input:not(:placeholder-shown) + span
+{
+    opacity:1;
+    font-weight: bold;
+    color: #eee;
+    transform: scale(0.85) translateY(-100%) translateX(-17px);
+}
+
+main section > div:last-child > form > div > label > span{
+    padding: 10px;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity:0.5;
+}
